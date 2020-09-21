@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, Validators } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
 
 @Component({
@@ -18,6 +18,17 @@ export class AppComponent {
         label: 'Email address',
         placeholder: 'Enter email',
         required: true,
+      },
+    },
+    {
+      key: 'acceptTerms',
+      type: 'checkbox',
+      templateOptions: {
+        checkboxMessage: 'Accept license and agreement',
+        required: true,
+      },
+      validators: {
+        validation: ['checked'],
       },
     },
   ];

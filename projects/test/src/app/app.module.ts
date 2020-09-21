@@ -1,14 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NebularFormlyModule } from 'nebular-formly';
-import { FormlyModule } from '@ngx-formly/core';
-
-import { AppComponent } from './app.component';
+import {
+  FormControl,
+  ReactiveFormsModule,
+  ValidationErrors,
+  Validators,
+} from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
+
+import { FormlyModule } from '@ngx-formly/core';
+import { NebularFormlyModule } from 'nebular-formly';
+
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbButtonModule } from '@nebular/theme';
+import { NbLayoutModule, NbThemeModule } from '@nebular/theme';
+
+export function isChecked(formControl: FormControl): ValidationErrors {
+  return formControl.value === true ? null : { checked: true };
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,10 +31,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     NbEvaIconsModule,
+    NbButtonModule,
     AppRoutingModule,
     FormlyModule.forRoot({
+      validators: [{ name: 'checked', validation: isChecked }],
       validationMessages: [
         { name: 'required', message: 'This field is required' },
+        { name: 'checked', message: 'Please agree to the terms' },
       ],
     }),
     ReactiveFormsModule,

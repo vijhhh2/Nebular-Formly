@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { NbInputModule } from '@nebular/theme';
-import { NebularFormlyInputComponent } from './nebular-formly-input/nebular-formly-input.component';
+import { NebularFormlyInputComponent } from './nebular-formly-input.component';
 
 import { FormlyModule } from '@ngx-formly/core';
 import { NebularFormlyFormFieldModule } from '../form-field/public-api';

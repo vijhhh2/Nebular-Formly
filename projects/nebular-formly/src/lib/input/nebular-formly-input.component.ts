@@ -31,7 +31,6 @@ import { FieldType } from '@ngx-formly/core';
       />
     </ng-template>
   `,
-  // tslint:disable-next-line: object-literal-sort-keys
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NebularFormlyInputComponent extends FieldType implements OnInit {
