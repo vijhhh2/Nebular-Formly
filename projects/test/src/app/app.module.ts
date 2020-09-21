@@ -20,7 +20,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     NbLayoutModule,
     NbEvaIconsModule,
     AppRoutingModule,
-    FormlyModule.forRoot(),
+    FormlyModule.forRoot({
+      validationMessages: [
+        { name: 'required', message: 'This field is required' },
+      ],
+    }),
     ReactiveFormsModule,
   ],
   providers: [],

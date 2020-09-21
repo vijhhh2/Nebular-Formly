@@ -38,7 +38,7 @@ export class NebularFormlyInputComponent extends FieldType implements OnInit {
   get type(): string {
     return this.to.type || 'text';
   }
-  ngOnInit() {
+  public ngOnInit(): void {
     console.log(this.to);
   }
 }
