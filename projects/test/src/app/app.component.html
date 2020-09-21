@@ -1,0 +1,23 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <!-- Insert header here -->
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <h1>Nebular Formly integration</h1>
+    `
+    <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
+      <formly-form
+        [form]="form"
+        [fields]="fields"
+        [model]="model"
+      ></formly-form>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    `
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+    <!-- Insert footer here -->
+  </nb-layout-footer>
+</nb-layout>

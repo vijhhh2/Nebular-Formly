@@ -10,6 +10,7 @@
         "statements"
       ]
     },
+    "object-literal-sort-keys": false,
     "array-type": false,
     "arrow-return-shorthand": true,
     "curly": true,
@@ -87,8 +88,7 @@
       "call-signature"
     ],
     "typedef-whitespace": {
-      "options": [
-        {
+      "options": [{
           "call-signature": "nospace",
           "index-signature": "nospace",
           "parameter": "nospace",
