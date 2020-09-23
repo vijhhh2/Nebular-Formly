@@ -3,7 +3,6 @@ import {
   FormControl,
   ReactiveFormsModule,
   ValidationErrors,
-  Validators,
 } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { NbButtonModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbRadioModule } from '@nebular/theme';
 import { NbLayoutModule, NbThemeModule } from '@nebular/theme';
 
 export function isChecked(formControl: FormControl): ValidationErrors {
@@ -33,6 +32,8 @@ export function isChecked(formControl: FormControl): ValidationErrors {
     NbEvaIconsModule,
     NbButtonModule,
     AppRoutingModule,
+    NbCardModule,
+    NbRadioModule,
     FormlyModule.forRoot({
       validators: [{ name: 'checked', validation: isChecked }],
       validationMessages: [

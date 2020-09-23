@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,10 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
 export class AppComponent {
   public form = new FormGroup({});
   public model = { email: '' };
+  public radioOptions$ = of([
+    { value: 'Male', label: 'Male' },
+    { value: 'Female', label: 'Female',},
+  ]);
   public fields: FormlyFieldConfig[] = [
     {
       key: 'email',
@@ -29,6 +34,32 @@ export class AppComponent {
       },
       validators: {
         validation: ['checked'],
+      },
+    },
+    {
+      key: 'sex',
+      type: 'radio',
+      templateOptions: {
+        name: 'sex1',
+        label: 'Sex',
+        disabled: false, // make it true to disable it globally
+        options: this.radioOptions$,
+        status: 'success',
+        required: true,
+        arrange: 'row', // remove arrange to make options arrange column wise
+      },
+    },
+    {
+      key: 'sex',
+      type: 'radio',
+      templateOptions: {
+        name: 'sex2',
+        label: 'Sex',
+        disabled: false, // make it true to disable it globally
+        options: this.radioOptions$,
+        status: 'danger',
+        required: true,
+        arrange: 'row', // remove arrange to make options arrange column wise
       },
     },
   ];

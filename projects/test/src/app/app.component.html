@@ -4,30 +4,44 @@
   </nb-layout-header>
 
   <nb-layout-column>
-    <h1>Nebular Formly integration</h1>
-    `
-    <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
-      <div style="margin-bottom: 20px">
-        <formly-form
-          [form]="form"
-          [fields]="fields"
-          [model]="model"
-        ></formly-form>
-      </div>
-      <button
-        [disabled]="!form.valid"
-        nbButton
-        status="success"
-        type="submit"
-        class="btn btn-default"
-      >
-        Submit
-      </button>
-    </form>
-    `
+    <nb-card>
+      <nb-card-header>
+        <h1>Nebular Formly integration</h1>
+      </nb-card-header>
+      <nb-card-body>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
+          <div style="margin-bottom: 20px">
+            <formly-form
+              [form]="form"
+              [fields]="fields"
+              [model]="model"
+            ></formly-form>
+          </div>
+          <button
+            [disabled]="!form.valid"
+            nbButton
+            status="success"
+            type="submit"
+            class="btn btn-default"
+          >
+            Submit
+          </button>
+        </form>
+        <nb-radio-group status="success" name="vijay" >
+          <nb-radio
+            *ngFor="let option of radioOptions$ | async"
+            [value]="option.value"
+            >{{ option.label }}</nb-radio
+          >
+        </nb-radio-group>
+        <nb-radio-group status="success" name="vijay" >
+          <nb-radio
+            *ngFor="let option of radioOptions$ | async"
+            [value]="option.value"
+            >{{ option.label }}</nb-radio
+          >
+        </nb-radio-group>
+      </nb-card-body>
+    </nb-card>
   </nb-layout-column>
-
-  <nb-layout-footer fixed>
-    <!-- Insert footer here -->
-  </nb-layout-footer>
 </nb-layout>
