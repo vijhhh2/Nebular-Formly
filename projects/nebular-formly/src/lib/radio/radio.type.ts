@@ -5,7 +5,7 @@ import { FieldType } from '@ngx-formly/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'nbf-nebular-formly-radio',
   template: `
-    <!-- <ng-container *ngIf="to.disabled; else elseTemplate">
+    <ng-container *ngIf="to.disabled; else elseTemplate">
       <nb-radio-group
         [formControl]="formControl"
         [name]="to.name"
@@ -14,7 +14,7 @@ import { FieldType } from '@ngx-formly/core';
         [disabled]="to.disabled"
         [status]="to.status"
         [ngClass]="{
-          row: to.arrange === 'row'
+          'row': to.arrange === 'row'
         }"
       >
         <nb-radio
@@ -25,7 +25,7 @@ import { FieldType } from '@ngx-formly/core';
           [id]="id + '_' + i"
           [value]="option.value"
         >
-          {{ option.label }} {{ to.name }}
+          {{ option.label }}
         </nb-radio>
       </nb-radio-group>
     </ng-container>
@@ -37,7 +37,7 @@ import { FieldType } from '@ngx-formly/core';
         [required]="to.required"
         [status]="to.status"
         [ngClass]="{
-          row: to.arrange === 'row'
+          'row': to.arrange === 'row'
         }"
       >
         <nb-radio
@@ -49,25 +49,10 @@ import { FieldType } from '@ngx-formly/core';
           [value]="option.value"
           [disabled]="option.disabled"
         >
-          {{ option.label }} {{ to.name }}
+          {{ option.label }}
         </nb-radio>
       </nb-radio-group>
-    </ng-template> -->
-    <nb-radio-group
-      [status]="to.status"
-      [name]="to.name"
-      [ngClass]="{
-        row: to.arrange === 'row'
-      }"
-      [formControl]="formControl"
-      [formlyAttributes]="field"
-    >
-      <nb-radio
-        *ngFor="let option of to.options | async"
-        [value]="option.value"
-        >{{ option.label }}</nb-radio
-      >
-    </nb-radio-group>
+    </ng-template>
   `,
   styles: ['.row { display: flex; flex-flow: row wrap; }'],
 })

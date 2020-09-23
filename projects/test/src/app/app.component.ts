@@ -50,7 +50,7 @@ export class AppComponent {
       },
     },
     {
-      key: 'sex',
+      key: 'sex2',
       type: 'radio',
       templateOptions: {
         name: 'sex2',
