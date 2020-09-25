@@ -10,11 +10,31 @@ import { of } from 'rxjs';
 })
 export class AppComponent {
   public form = new FormGroup({});
-  public model = { email: '' };
+  public model = {
+    email: '',
+    type: ['Temporary', 'Ordinary'],
+    type2: 'captain_america',
+  };
   public radioOptions$ = of([
     { value: 'Male', label: 'Male' },
-    { value: 'Female', label: 'Female',},
+    { value: 'Female', label: 'Female' },
   ]);
+
+  public selectOptions$ = of([
+    { value: 'Temporary', label: 'Temporary' },
+    { value: 'Permanent', label: 'Permanent' },
+    { value: 'Ordinary', label: 'Ordinary' },
+    { value: 'Not-Ordinary', label: 'Not Ordinary' },
+  ]);
+
+  public selectOptions3$ = of([
+    { label: 'Iron Man', id: 'iron_man', gender: 'Male', disabled: true },
+    { label: 'Captain America', id: 'captain_america', gender: 'Male' },
+    { label: 'Black Widow', id: 'black_widow', gender: 'Female', disabled: true },
+    { label: 'Hulk', id: 'hulk', gender: 'Male' },
+    { label: 'Captain Marvel', id: 'captain_marvel', gender: 'Female', disabled: true },
+  ]);
+
   public fields: FormlyFieldConfig[] = [
     {
       key: 'email',
@@ -49,17 +69,47 @@ export class AppComponent {
         arrange: 'row', // remove arrange to make options arrange column wise
       },
     },
+    // {
+    //   key: 'sex2',
+    //   type: 'radio',
+    //   templateOptions: {
+    //     name: 'sex2', // Name is must and should
+    //     label: 'Sex',
+    //     disabled: false, // make it true to disable it globally
+    //     options: this.radioOptions$,
+    //     status: 'danger',
+    //     required: true,
+    //     arrange: 'row', // remove arrange to make options arrange column wise
+    //   },
+    // },
     {
-      key: 'sex2',
-      type: 'radio',
+      key: 'type',
+      type: 'select',
       templateOptions: {
-        name: 'sex2',
-        label: 'Sex',
-        disabled: false, // make it true to disable it globally
-        options: this.radioOptions$,
-        status: 'danger',
+        label: 'Select Type',
+        placeholder: 'Select Type',
+        disabled: false,
+        options: this.selectOptions$,
         required: true,
-        arrange: 'row', // remove arrange to make options arrange column wise
+        multiple: true,
+        shape: 'round',
+      }
+    },
+    {
+      key: 'type2',
+      type: 'select',
+      templateOptions: {
+        label: 'Select Group Type',
+        placeholder: 'Select Group Type',
+        status: 'success',
+        disabled: false,
+        options: this.selectOptions3$,
+        groupProp: 'gender',
+        valueProp: 'id',
+        labelProp: 'label',
+        required: true,
+        size: 'large',
+        filled: true,
       },
     },
   ];
