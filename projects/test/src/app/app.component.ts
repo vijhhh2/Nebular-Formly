@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { FormGroup, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
+import { DatePickers } from 'projects/nebular-formly/src/public-api';
 import { of } from 'rxjs';
 
 @Component({
@@ -30,9 +31,19 @@ export class AppComponent {
   public selectOptions3$ = of([
     { label: 'Iron Man', id: 'iron_man', gender: 'Male', disabled: true },
     { label: 'Captain America', id: 'captain_america', gender: 'Male' },
-    { label: 'Black Widow', id: 'black_widow', gender: 'Female', disabled: true },
+    {
+      label: 'Black Widow',
+      id: 'black_widow',
+      gender: 'Female',
+      disabled: true,
+    },
     { label: 'Hulk', id: 'hulk', gender: 'Male' },
-    { label: 'Captain Marvel', id: 'captain_marvel', gender: 'Female', disabled: true },
+    {
+      label: 'Captain Marvel',
+      id: 'captain_marvel',
+      gender: 'Female',
+      disabled: true,
+    },
   ]);
 
   public fields: FormlyFieldConfig[] = [
@@ -93,7 +104,7 @@ export class AppComponent {
         required: true,
         multiple: true,
         shape: 'round',
-      }
+      },
     },
     {
       key: 'type2',
@@ -110,6 +121,37 @@ export class AppComponent {
         required: true,
         size: 'large',
         filled: true,
+      },
+    },
+    {
+      key: 'date',
+      type: 'datepicker',
+      templateOptions: {
+        label: 'Select Date',
+        placeholder: 'Select Date',
+        required: true,
+        pickerType: DatePickers.DATE_PICKER,
+      },
+    },
+    {
+      key: 'date2',
+      type: 'datepicker',
+      templateOptions: {
+        label: 'Select Date',
+        placeholder: 'Select Date',
+        startView: 'month',
+        required: true,
+        pickerType: DatePickers.DATE_TIME_PICKER,
+      },
+    },
+    {
+      key: 'date3',
+      type: 'datepicker',
+      templateOptions: {
+        label: 'Select Date',
+        placeholder: 'Select Date',
+        required: true,
+        pickerType: DatePickers.RANGE_PICKER,
       },
     },
   ];

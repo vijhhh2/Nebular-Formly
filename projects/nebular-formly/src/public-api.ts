@@ -6,3 +6,4 @@ export * from './lib/input/public-api';
 export * from './lib/checkbox/public-api';
 export * from './lib/radio/public-api';
 export * from './lib/select/public-api';
+export * from './lib/date-picker/public-api';
