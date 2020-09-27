@@ -1,6 +1,22 @@
 {
   "name": "nebular-formly",
   "version": "0.0.1",
+  "author": {
+    "name": "Vijay",
+    "email": "vijay.mangapoti@gmail.com",
+    "url": "https://twitter.com/Vijhhh2"
+  },
+  "keywords": [
+    "nebular",
+    "nebular-ui",
+    "nebular ui",
+    "ngx-formly",
+    "formly"
+  ],
+  "description": "Ngx Formly integration for Nebular UI",
+  "homepage": "https://github.com/vijhhh2/Nebular-Formly.git",
+  "license": "MIT",
+  "preview": true,
   "peerDependencies": {
     "@angular/common": "^10.1.2",
     "@angular/core": "^10.1.2",

@@ -23,7 +23,6 @@ export enum DatePickers {
         />
         <nb-datepicker
           #datepicker
-          [startView]="to.startView"
           [format]="to.format"
           [max]="to.max"
           [min]="to.min"
@@ -41,14 +40,13 @@ export enum DatePickers {
           [nbDatepicker]="dateTimePicker"
         />
         <nb-date-timepicker
-          [startView]="to.startView"
           withSeconds
           [format]="to.format"
           #dateTimePicker
           [max]="to.max"
           [min]="to.min"
-          [singleColumn]="to.singleColumn"
-          [step]="to.step"
+          [singleColumn]="to.singleColumn || true"
+          [step]="to.step || 5"
         ></nb-date-timepicker>
       </ng-container>
       <ng-container *ngSwitchCase="DatePickers.RANGE_PICKER">
@@ -62,7 +60,6 @@ export enum DatePickers {
           [formlyAttributes]="field"
         />
         <nb-rangepicker
-          [startView]="to.startView"
           [format]="to.format"
           [max]="to.max"
           [min]="to.min"
@@ -81,7 +78,6 @@ export enum DatePickers {
           [formlyAttributes]="field"
         />
         <nb-datepicker
-          [startView]="to.startView"
           #datepicker
           [format]="to.format"
           [max]="to.max"
@@ -95,8 +91,6 @@ export enum DatePickers {
 })
 export class DatePickerTypeComponent extends FieldType {
   public DatePickers = DatePickers;
-
-  public defaultOptions = {};
 
   public onDateChange(event: any): void {
     if (this.to.dateChange) {

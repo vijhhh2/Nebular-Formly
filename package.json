@@ -1,6 +1,10 @@
 {
   "name": "nebular-formly-library",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": {
+    "name": "Vijay",
+    "email": "vijay.mangapoti@gmail.com"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
