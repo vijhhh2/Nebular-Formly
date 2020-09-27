@@ -6,7 +6,7 @@ import { FormlyModule } from '@ngx-formly/core';
 
 import { NbCheckboxModule } from '@nebular/theme';
 
-import { NebularFormlyFormFieldModule } from '../form-field/public-api';
+import { NebularFormlyFormFieldModule } from '../form-field/form-field.module';
 import { NebularFormlyCheckboxComponent } from './checkbox.type';
 
 @NgModule({

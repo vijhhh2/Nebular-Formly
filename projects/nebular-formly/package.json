@@ -1,5 +1,5 @@
 {
-  "name": "nebular-formly",
+  "name": "ngx-nebular-formly",
   "version": "0.0.1",
   "author": {
     "name": "Vijay",
@@ -7,6 +7,10 @@
     "url": "https://twitter.com/Vijhhh2"
   },
   "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "angular-nebular",
     "nebular",
     "nebular-ui",
     "nebular ui",
@@ -14,15 +18,22 @@
     "formly"
   ],
   "description": "Ngx Formly integration for Nebular UI",
-  "homepage": "https://github.com/vijhhh2/Nebular-Formly.git",
+  "homepage": "https://github.com/vijhhh2/Nebular-Formly",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vijhhh2/Nebular-Formly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vijhhh2/Nebular-Formly.git"
+  },
   "license": "MIT",
   "preview": true,
   "peerDependencies": {
     "@angular/common": "^10.1.2",
     "@angular/core": "^10.1.2",
-    "@nebular/theme": "6.1.0",
-    "@ngx-formly/core": "5.10.1",
-    "@angular/forms": "10.1.1"
+    "@nebular/theme": "^6.1.0 || ^6.2.0",
+    "@ngx-formly/core": "^5.10.1",
+    "@angular/forms": "^10.1.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"

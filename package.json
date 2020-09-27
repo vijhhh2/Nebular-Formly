@@ -11,7 +11,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "lib:publish": "git push origin master && ng build nebular-formly --prod && npm publish"
   },
   "private": true,
   "dependencies": {

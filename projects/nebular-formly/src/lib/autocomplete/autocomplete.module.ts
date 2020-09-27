@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
-import { NebularFormlyFormFieldModule } from '../form-field/public-api';
+import { NebularFormlyFormFieldModule } from '../form-field/form-field.module';
 
 import { NbAutocompleteModule, NbInputModule } from '@nebular/theme';
 

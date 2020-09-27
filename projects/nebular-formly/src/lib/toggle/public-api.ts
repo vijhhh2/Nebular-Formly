@@ -1,2 +1,2 @@
-export { ToggleModule } from './toggle.module';
-export { ToggleTypeComponent } from './toggle.type';
+export * from './toggle.module';
+export * from './toggle.type';

@@ -1,2 +1,2 @@
-export { TimepickerModule } from './timepicker.module';
-export { TimePickerTypeComponent } from './time-picker.type';
+export * from './timepicker.module';
+export * from './time-picker.type';

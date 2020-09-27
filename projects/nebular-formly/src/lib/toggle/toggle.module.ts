@@ -5,10 +5,8 @@ import { NbToggleModule } from '@nebular/theme';
 import { FormlyModule } from '@ngx-formly/core';
 import { ToggleTypeComponent } from './toggle.type';
 
-
-
 @NgModule({
-  declarations: [ ToggleTypeComponent ],
+  declarations: [ToggleTypeComponent],
   imports: [
     CommonModule,
     NbToggleModule,
@@ -18,9 +16,9 @@ import { ToggleTypeComponent } from './toggle.type';
         {
           name: 'toggle',
           component: ToggleTypeComponent,
-        }
-      ]
-    })
-  ]
+        },
+      ],
+    }),
+  ],
 })
-export class ToggleModule { }
+export class ToggleModule {}

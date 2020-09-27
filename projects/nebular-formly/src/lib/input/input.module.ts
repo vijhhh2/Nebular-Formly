@@ -6,7 +6,7 @@ import { NbInputModule } from '@nebular/theme';
 import { NebularFormlyInputComponent } from './nebular-formly-input.component';
 
 import { FormlyModule } from '@ngx-formly/core';
-import { NebularFormlyFormFieldModule } from '../form-field/public-api';
+import { NebularFormlyFormFieldModule } from '../form-field/form-field.module';
 
 @NgModule({
   declarations: [NebularFormlyInputComponent],
