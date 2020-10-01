@@ -6,17 +6,17 @@
   @include nb-theme-global();
 }
 /* You can add global styles to this file, and also import other style files */
-.form-group {
-  display: flex;
-  flex-flow: column wrap;
-  margin-bottom: 20px;
-}
+// .form-group {
+//   display: flex;
+//   flex-flow: column wrap;
+//   margin-bottom: 20px;
+// }
 
-.required {
-  color: red;
-}
+// .required {
+//   color: red;
+// }
 
-.invalid-feedback {
-  color: red;
-  font-size: 0.7rem;
-}
+// .invalid-feedback {
+//   color: red;
+//   font-size: 0.7rem;
+// }

@@ -10,6 +10,7 @@ import { SelectPipeModule } from './select-pipe/select-pipe.module';
 import { SelectModule } from './select/select.module';
 import { TimepickerModule } from './timepicker/timepicker.module';
 import { ToggleModule } from './toggle/toggle.module';
+import { TextareaModule } from './textarea/textarea.module';
 
 @NgModule({
   declarations: [],
@@ -24,6 +25,7 @@ import { ToggleModule } from './toggle/toggle.module';
     TimepickerModule,
     ToggleModule,
     AutocompleteModule,
+    TextareaModule,
   ],
 })
 export class NebularFormlyModule {}

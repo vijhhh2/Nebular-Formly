@@ -9,7 +9,7 @@ import { FieldType } from '@ngx-formly/core';
       [formControl]="formControl"
       [required]="to.required"
       [disabled]="to.disabled"
-      [status]="to.status"
+      [status]="to.status || 'info'"
       [labelPosition]="to.labelPosition"
       >{{ to.label }}</nb-toggle
     >

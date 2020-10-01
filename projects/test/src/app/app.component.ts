@@ -585,6 +585,16 @@ export class AppComponent {
         filter: (term) => this.filterStates(term),
       },
     },
+    {
+      key: 'description',
+      type: 'textarea',
+      templateOptions: {
+        label: 'Description',
+        placeholder: 'Description',
+        required: true,
+        fullWidth: true,
+      },
+    },
   ];
 
   public filterStates(

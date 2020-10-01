@@ -22,6 +22,23 @@ import { FieldWrapper } from '@ngx-formly/core';
       }}</small>
     </div>
   `,
+  styles: [
+    `
+      .form-group {
+        display: flex;
+        flex-flow: column wrap;
+        margin-bottom: 20px;
+      }
+      .required {
+        color: red;
+      }
+
+      .invalid-feedback {
+        color: red;
+        font-size: 0.7rem;
+      }
+    `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NebularFormlyFormFieldWrapper extends FieldWrapper {}
