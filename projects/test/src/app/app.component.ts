@@ -576,16 +576,6 @@ export class AppComponent {
       },
     },
     {
-      key: 'states',
-      type: 'autocomplete',
-      templateOptions: {
-        required: true,
-        label: 'Autocomplete',
-        placeholder: 'Placeholder',
-        filter: (term) => this.filterStates(term),
-      },
-    },
-    {
       key: 'description',
       type: 'textarea',
       templateOptions: {

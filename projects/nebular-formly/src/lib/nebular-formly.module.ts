@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { AutocompleteModule } from './autocomplete/autocomplete.module';
+// import { AutocompleteModule } from './autocomplete/autocomplete.module';
 import { NebularFormlyCheckboxModule } from './checkbox/checkbox.module';
 import { DatePickerModule } from './date-picker/date-picker.module';
 import { NebularFormlyFormFieldModule } from './form-field/form-field.module';
@@ -24,7 +24,7 @@ import { TextareaModule } from './textarea/textarea.module';
     DatePickerModule,
     TimepickerModule,
     ToggleModule,
-    AutocompleteModule,
+    // AutocompleteModule,
     TextareaModule,
   ],
 })

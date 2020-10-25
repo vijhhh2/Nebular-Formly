@@ -9,5 +9,7 @@ export * from './lib/select/public-api';
 export * from './lib/date-picker/public-api';
 export * from './lib/timepicker/public-api';
 export * from './lib/toggle/public-api';
-export * from './lib/autocomplete/public-api';
+
 export * from './lib/textarea/public-api';
+
+
