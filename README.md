@@ -31,7 +31,7 @@ This is an Implementation of **[Ngx-Formly](https://formly.dev/)** for **[Nebula
     
     @NgModule({
         NebularFormlyModule,
-        FormlyModule,
+        FormlyModule.forRoot(),
         ReactiveFormsModule,
     })
 ```
